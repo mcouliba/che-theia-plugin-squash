@@ -7,7 +7,8 @@ RUN chmod +x /usr/local/bin/kubectl && \
     kubectl version --client
 
 # Install Squash CLI
-ADD https://github.com/solo-io/squash/releases/download/v0.2.1/squash-linux /usr/local/bin/squash
-RUN chmod +x /usr/local/bin/squash 
+RUN curl -o /usr/local/bin/squash -L https://github.com/solo-io/squash/releases/download/v0.2.1/squash-linux && \
+    chmod +x /usr/local/bin/squash && \
+    squash --help
 
 USER theia
