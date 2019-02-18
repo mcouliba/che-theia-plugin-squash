@@ -16,6 +16,9 @@ RUN curl -o /usr/local/bin/squash -L https://github.com/solo-io/squash/releases/
     chmod +x /usr/local/bin/squash && \
     squash --help
 
-
+# Install Golang
+ENV PATH="/usr/local/go/bin:${PATH}"
+RUN curl https://dl.google.com/go/go1.11.5.linux-amd64.tar.gz | tar -xzC /usr/local/ && \
+    go version
 
 USER theia
