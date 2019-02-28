@@ -1,4 +1,4 @@
-FROM eclipse/che-theia:0.3.19-nightly
+FROM eclipse/che-theia:master
 
 ARG OC_VERSION=3.11.43
 ARG GO_VERSION=1.11.5
