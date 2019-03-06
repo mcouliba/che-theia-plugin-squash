@@ -15,5 +15,4 @@ RUN chmod +x /usr/local/bin/kubectl && \
 
 # Install Squash CLI
 RUN wget -qO /usr/local/bin/squashctl https://github.com/solo-io/squash/releases/download/${SQUASHCTL_VERSION}/squashctl-linux && \
-    chmod +x /usr/local/bin/squashctl && \
-    squashctl --version
+    chmod +x /usr/local/bin/squashctl
