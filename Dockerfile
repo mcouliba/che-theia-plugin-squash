@@ -1,7 +1,7 @@
 FROM eclipse/che-theia-endpoint-runtime:nightly
 
 ARG KUBECTL_VERSION=v1.13.3
-ARG SQUASH_VERSION=v0.3.1
+ARG SQUASHCTL_VERSION=v0.4.4
 
 # Preparation
 RUN mkdir /lib64
@@ -14,6 +14,6 @@ RUN chmod +x /usr/local/bin/kubectl && \
     kubectl version --client
 
 # Install Squash CLI
-RUN wget -qO /usr/local/bin/squash https://github.com/solo-io/squash/releases/download/${SQUASH_VERSION}/squash-linux && \
-    chmod +x /usr/local/bin/squash && \
-    squash --help
+RUN wget -qO /usr/local/bin/squashctl https://github.com/solo-io/squash/releases/download/${SQUASHCTL_VERSION}/squashctl-linux && \
+    chmod +x /usr/local/bin/squashctl && \
+    squashctl --version
